@@ -1,7 +1,8 @@
-def generate_image_from_shapes(shapes):
-    from PIL import Image, ImageDraw
-    import ast
+from PIL import Image, ImageDraw
+import ast
 
+
+def generate_image_from_shapes(shapes):
     # Create an empty white image
     img = Image.new("RGB", (1920, 1080), (255, 255, 255))
     draw = ImageDraw.Draw(img)
