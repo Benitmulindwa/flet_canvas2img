@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw
 import ast
 
 
-def canvas2img(shapes:list, width=770,height=640,bgcolor:tuple=(255, 255, 255)):
+def canvas2img(shapes:list, width:int=770,height:int=640,bgcolor:tuple=(255, 255, 255),save_path="output.png"):
     # Create an empty white image
     img = Image.new("RGB", (width, height), bgcolor)
     draw = ImageDraw.Draw(img)
@@ -88,5 +88,5 @@ def canvas2img(shapes:list, width=770,height=640,bgcolor:tuple=(255, 255, 255)):
                 outline=color
             )
     # Save the image as PNG or JPG
-    img.save("output.png", "PNG")
+    img.save(save_path, "PNG")
     return img
