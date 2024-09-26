@@ -4,6 +4,18 @@ import ast
 
 
 def canvas2img(shapes:list, width:int=770,height:int=640,bgcolor:tuple=(255, 255, 255),save_path="output.png"):
+
+    """
+    Canvas2img.
+    
+    :param shapes: List of shapes from a Flet canvas.
+    :param width: Width of the output image.
+    :param height: Height of the output image.
+    :param background_color: Background color of the image.
+    :param save_path: Path to save the generated image.
+    :return: PIL Image object.
+    """
+    
     # Create an empty white image
     img = Image.new("RGB", (width, height), bgcolor)
     draw = ImageDraw.Draw(img)
@@ -34,7 +46,6 @@ def canvas2img(shapes:list, width:int=770,height:int=640,bgcolor:tuple=(255, 255
 
         # handle circle shape
         elif shape_name == "circle":
-            print(shape_properties)
             x = shape_properties["x"]
             y = shape_properties["y"]
             radius = shape_properties["radius"]
@@ -46,7 +57,6 @@ def canvas2img(shapes:list, width:int=770,height:int=640,bgcolor:tuple=(255, 255
             )
         # handle arc shape
         elif shape_name == "arc":
-
             x = shape_properties["x"]
             y = shape_properties["y"]
             width = shape_properties["width"]
