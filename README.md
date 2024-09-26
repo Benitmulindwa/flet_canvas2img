@@ -1,9 +1,9 @@
 # flet_canvas2img
 A script that helps you to save a Flet Canvas as an Image
 ## Installation
-`
+```
 pip install git+https://github.com/Benitmulindwa/flet_canvas2img.git
-`
+```
 ## Example
 ```python
 import math
