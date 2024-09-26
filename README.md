@@ -30,6 +30,8 @@ def main(page: ft.Page):
     )
 
     page.add(cp)
+
+    # Save the whole canvas as an image
     canvas2img(cp.shapes)
 
 
