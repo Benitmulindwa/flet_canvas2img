@@ -83,8 +83,9 @@ def generate_image_from_shapes(shapes):
                     width + x,
                     height + y,
                 ],
-                
+                width=stroke_width,
                 fill=style,
+                outline=color
             )
     # Save the image as PNG or JPG
     img.save("output.png", "PNG")
