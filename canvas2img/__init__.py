@@ -2,9 +2,9 @@ from PIL import Image, ImageDraw
 import ast
 
 
-def generate_image_from_shapes(shapes):
+def canvas2img(shapes:list, width=770,height=640,bgcolor:tuple=(255, 255, 255)):
     # Create an empty white image
-    img = Image.new("RGB", (1920, 1080), (255, 255, 255))
+    img = Image.new("RGB", (width, height), bgcolor)
     draw = ImageDraw.Draw(img)
 
     for i, _ in enumerate(shapes):
