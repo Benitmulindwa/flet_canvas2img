@@ -34,7 +34,14 @@ def main(page: ft.Page):
     # Save the whole canvas as an image
     canvas2img(cp.shapes)
 
-
 ft.app(main)
 
 ```
+## Params
+`canvas2img()` gets the following parameters:
+
+- `shapes:` List of shapes from a Flet canvas.
+- `width:` Width of the output image(int).
+- `height:` Height of the output image(int).
+- `background_color:` Background color of the image.
+- `save_path:` Path to save the generated image, by default it is `output.png`
