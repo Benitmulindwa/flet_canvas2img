@@ -98,6 +98,6 @@ def canvas2img(shapes:list, width:int=770,height:int=640,bgcolor:tuple=(255, 255
                 fill=style,
                 outline=color
             )
-    # Save the image as PNG or JPG
+    # Save the image as PNG
     img.save(save_path, "PNG")
     return img
