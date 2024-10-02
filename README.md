@@ -10,7 +10,7 @@ import math
 
 import flet as ft
 import flet.canvas as cv
-from flet_canvas2img import generate_image_from_shapes
+from flet_canvas2img import canvas2img
 
 
 def main(page: ft.Page):
