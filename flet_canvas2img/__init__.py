@@ -3,7 +3,7 @@ import math
 import ast
 
 
-def canvas2img(shapes:list, width:int=770,height:int=640,bgcolor:tuple=(255, 255, 255),save_path="output.png"):
+def canvas2img(shapes:list, width:int=770,height:int=640,bgcolor:tuple=(255, 255, 255),can_save:bool=True,save_path:str="output.png"):
 
     """
     Canvas2img.
@@ -12,6 +12,7 @@ def canvas2img(shapes:list, width:int=770,height:int=640,bgcolor:tuple=(255, 255
     :param width: Width of the output image.
     :param height: Height of the output image.
     :param background_color: Background color of the image.
+    :param can_save: If True it will save the image else the output image will not be saved.
     :param save_path: Path to save the generated image.
     :return: PIL Image object.
     """
@@ -99,5 +100,6 @@ def canvas2img(shapes:list, width:int=770,height:int=640,bgcolor:tuple=(255, 255
                 outline=color
             )
     # Save the image as PNG
-    img.save(save_path, "PNG")
+    if can_save:
+        img.save(save_path, "PNG")
     return img
