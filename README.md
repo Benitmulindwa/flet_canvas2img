@@ -44,4 +44,5 @@ ft.app(main)
 - `width:` Width of the output image(int).
 - `height:` Height of the output image(int).
 - `background_color:` Background color of the image.
+- `can_save:` If True it will save the image else the output image will not be saved, by default it's `True`.
 - `save_path:` Path to save the generated image, by default it is `output.png`
