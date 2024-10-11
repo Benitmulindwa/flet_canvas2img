@@ -7,7 +7,6 @@ pip install git+https://github.com/Benitmulindwa/flet_canvas2img.git
 ## Example
 ```python
 import math
-
 import flet as ft
 import flet.canvas as cv
 from flet_canvas2img import canvas2img
