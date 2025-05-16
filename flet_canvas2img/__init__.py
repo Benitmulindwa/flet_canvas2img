@@ -3,7 +3,7 @@ import math
 import ast
 
 
-def canvas2img(shapes:list, width:int=770, height:int=640, bgcolor:tuple=(255, 255, 255, 0), can_save:bool=True, save_path:str="output.png"):
+def canvas2img(shapes:list, width:int=770, height:int=640, bgcolor:tuple=(255, 255, 255, 255), can_save:bool=True, save_path:str="output.png"):
 
     """
     Canvas2img.
@@ -11,7 +11,7 @@ def canvas2img(shapes:list, width:int=770, height:int=640, bgcolor:tuple=(255, 2
     :param shapes: List of shapes from a Flet canvas.
     :param width: Width of the output image.
     :param height: Height of the output image.
-    :param bgcolor: Background color of the image. For transparent background use (255, 255, 255, 0) or (0, 0, 0, 0).
+    :param bgcolor: Background color of the image. For transparent background use (R, G, B, 0) alpha set to 0. Default White (255, 255, 255, 255).
     :param can_save: If True it will save the image else the output image will not be saved.
     :param save_path: Path to save the generated image.
     :return: PIL Image object.
