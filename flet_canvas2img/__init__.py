@@ -3,7 +3,7 @@ import math
 import ast
 
 
-def canvas2img(shapes:list, width:int=770,height:int=640,bgcolor:tuple=(255, 255, 255),can_save:bool=True,save_path:str="output.png"):
+def canvas2img(shapes:list, width:int=770, height:int=640, bgcolor:tuple=(255, 255, 255, 0), can_save:bool=True, save_path:str="output.png"):
 
     """
     Canvas2img.
@@ -11,14 +11,14 @@ def canvas2img(shapes:list, width:int=770,height:int=640,bgcolor:tuple=(255, 255
     :param shapes: List of shapes from a Flet canvas.
     :param width: Width of the output image.
     :param height: Height of the output image.
-    :param background_color: Background color of the image.
+    :param bgcolor: Background color of the image. For transparent background use (255, 255, 255, 0) or (0, 0, 0, 0).
     :param can_save: If True it will save the image else the output image will not be saved.
     :param save_path: Path to save the generated image.
     :return: PIL Image object.
     """
     
-    # Create an empty white image
-    img = Image.new("RGB", (width, height), bgcolor)
+    # Create an empty transparent image (RGBA mode)
+    img = Image.new("RGBA", (width, height), bgcolor)
     draw = ImageDraw.Draw(img)
 
     for i, _ in enumerate(shapes):
@@ -99,7 +99,7 @@ def canvas2img(shapes:list, width:int=770,height:int=640,bgcolor:tuple=(255, 255
                 fill=style,
                 outline=color
             )
-    # Save the image as PNG
+    # Save the image as PNG with transparency
     if can_save:
         img.save(save_path, "PNG")
     return img
